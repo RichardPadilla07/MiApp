@@ -4,20 +4,18 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-info',
   standalone: true,
-  templateUrl: './home.page.html',
-  styleUrls: ['./home.page.scss'],
+  templateUrl: './info.page.html',
+  styleUrls: ['./info.page.scss'],
   imports: [IonicModule, CommonModule]
 })
-export class HomePage {
+export class InfoPage {
   constructor(private router: Router) {}
-
-  goToDetails() {
-    this.router.navigate(['/details']);
+  goBack() {
+    this.router.navigate(['/home']);
   }
-
-  goToInfo() {
-    this.router.navigate(['/info']);
+  goDetails(){
+    this.router.navigate(['/details']);
   }
 }
